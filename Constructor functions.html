@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    //constructor functions
+    function Man(first_name,last_name,age){
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.age = age;
+    }
+
+    let man = new Man("Paboda","Sanduni",21);
+    console.log(man);
+
+    //class syntax
+    class Teacher{
+        constructor(first_name,last_name,age) {
+            this._first_name = first_name;
+            this._last_name = last_name;
+            this._age = age;
+        }
+
+        //getters
+        get first_name(){
+            return this._first_name;
+        }
+        get last_name(){
+            return this._last_name;
+        }
+        get age(){
+            return this._age;
+        }
+
+        //setters
+        set first_name(first_name){
+            this._first_name = first_name + '@ijse';
+
+            /*teacher.first_name  //privet nis kelinm access krl gnn b ek nis mehem call krnw
+            "Paboda"
+            teacher.first_name = "Kumari"
+            "Kumari"
+            teacher.first_name
+            "Kumari@ijse"*/
+        }
+        set last_name(last_name){
+            this._last_name = last_name;
+        }
+        set age(age){
+            this._age = age;
+        }
+    }
+
+    let teacher = new Teacher("Paboda","Sanduni",21);
+    console.log(teacher);
+</script>
+</body>
+</html>

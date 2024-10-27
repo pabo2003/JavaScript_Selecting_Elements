@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+    Hello JQuery
+</h1>
+<p id="para">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad culpa ea eaque, esse facere labore laboriosam mollitia numquam quibusdam rerum voluptatum! Aspernatur atque facere magnam modi pariatur repellendus velit.
+</p>
+<script src="assest/lib/Jquary.js">
+</script>
+<script>
+    $("h1").css("background","red");
+    $("p").css("color","deeppink");
+    $("#para").css("background","black")
+</script>
+<script>
+    //document dot ready method standard way
+    $(document).ready(function (){
+        console.log("Document is ready!!");
+    });
+    //document dot ready method short way
+    $(function () {
+        console.log("Document is ready!!");
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+    <li>Java</li>
+</ul>
+
+<input type="text">
+<button>Add</button>
+
+<script src="assest/lib/Jquary.js"></script>
+<script>
+    $('button').on('click',function () {
+        let val = $('input').val();
+        let newVal = `<li>${val}</li>`;
+        $('ul').append(newVal);
+    });
+
+    $('ul').on('click','li',function (){
+        let value = $(this).text();
+        let index = $(this).index();
+        console.log("clicked!! :-"+value);
+        console.log("clicked!! :-"+index);
+    });
+</script>
+</body>
+</html>

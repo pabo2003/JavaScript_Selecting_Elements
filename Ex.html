@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var new_str1 = "Hello world";
+    new_str1.indexOf("world");
+    console.log(new_str1);//6 me wachane kiweni akurenda patan ganne kiyalla pennanawa
+
+    new_str1 = "hellow world world";
+    new_str1.indexOf("world");//7 mulin hambena wachane
+    new_str1.lastIndexOf("world");//13 anthimata hamben wachane
+    console.log(new_str1);
+
+    var str2 = "mango";
+    new_str1.localeCompare(str2);//-1  samana naththam -1 watenne
+    console.log(str2);
+
+    var str3 = "mango";
+    str2.localeCompare(str3);//0 samana nm 0 watenne
+    console.log(str3);
+
+    var str4 = "Mango";
+    str4.localeCompare(str3);//1 samana n but weight ek wadi ek nis 1 pennananwa
+    console.log(str4);
+
+    var str5 = "Happy Birthday to you!";
+    str5.match(/o/g);
+    console.log(str5);
+
+    var str6 = "A B C D E";
+    str6.replace(" ",",");
+    console.log(str6);//'A,B C D E' hambene palweni ekt withri apply wenne
+
+    str6.replaceAll(" ",",");
+    console.log(str6);//'A,B,C,D,E' thiyana okkotama apply wenw
+
+    var str7 = "Hello hi welcome hi";
+    str7.search('hi');
+
+    var str8 = "A, B, C, D, E";
+    str8.split(", ");
+    console.log(str8); //[ "A", "B", "C", "D", "E" ]  dila thiyana tik makala anith tik array ekkt dala denw
+
+    str7.startsWith("Hello");//true
+    str7.startsWith("hi");//false
+
+    str7.endsWith("hi");//true
+    str7.endsWith("hello");//false
+
+    str5.substr(6);//"Birthday to you!" adala index ekt passe tik pennanawa
+
+    str5.substr(6,8 /*index eken passe index kiyk ynkm onid kiyl*/);//"Birthday"
+
+    new_str1.toLocaleLowerCase();//okkoma simple krnw  (toLowerCase(); ekenuth ekmai wenne)
+    new_str1.toLocaleUpperCase();//okkoma capital krnw  (toUpperCase(); ekenuth ekmai wenne)
+
+    var name = " Paboda Sanduni ";
+    name.trim();
+    console.log(name);//"Paboda Sanduni"
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //literal based
+    let array = [1,2,3,4,5];
+    console.log(array);
+    //constructor based
+    let array1 = new Array(1,2,3,4,5);
+    console.log(array1);
+
+    let array2 = ["A","B","C"];
+    console.log("Index0:",array2[0]);
+//array ekka index ekk allagen value ekk assign krnn puluwn
+    console.log(array2);
+    array2[2] = "HELLO";
+    console.log(array2);
+
+
+    //****************Array methods*********************//
+    //********push();************//aluthen item ekk array eke agata ekathu karann puluwn
+    let array3 = ["Ranil","Namal","Sajith"];
+    array3.push("AKD","silarathana");
+    console.log(array3);
+
+    //***********pop();*********//array eke agama thiyana item ek remove krnw
+    array3.pop();
+    console.log(array3);
+
+    //********shift();*******//array eke mulinm thiyana item ek remove krnw
+    array3.shift();
+    console.log(array3);
+
+    //**********unshift();************//
+    array3.unshift("Kamal");
+    console.log(array3);
+
+    //****************contact();********//  array dek ekthu krl aluthin array ekk hadal denw
+    let num_array = [1,2,3];
+    let num_array2 = [4,5,6,7,8,9,10];
+    let num_array_result = num_array.concat(num_array2);
+    console.log(num_array);
+    console.log(num_array2);
+    console.log(num_array_result);
+    console.log(num_array.concat(num_array2));
+    console.log(num_array2.concat(num_array));
+
+    //*******slice();***********//
+    let copy = num_array_result.slice(2);
+    console.log("copy1:",copy);
+
+    let copy1 = num_array_result.slice(2,6);
+    console.log(copy1);
+
+    let copy2 = num_array_result.slice(-2);
+    console.log(copy2);
+
+    //******shallow copy*********//
+    let myNum = num_array_result.slice(0);
+    console.log(myNum);
+
+    let myNewNum = myNum;
+    console.log(myNewNum);
+
+    myNewNum[0] = 100;
+    console.log(myNum);
+    console.log(myNewNum);
+
+    //***********splice();*******//array eke apita anwashya kotasakma ain krnn oni nm ,add krnn oni nm
+    let newArray = [1,2,3,4,5,6,7,8,9,10];
+    console.log(newArray);
+    newArray.splice(7,2);
+    console.log(newArray);
+
+    newArray.splice(1,1,"hello");
+    console.log(newArray);
+
+    let arr1 = [10,40,50,20,70,60,80,30];  //[10,20,30,40,50,60,70,80]
+    for (let i = 0; i < arr1.length; i++) {
+        let x = arr1[i];
+        if (i>x){
+            arr1[i] = x;
+        }else {
+
+        }
+    }
+    console.log(arr1);
+
+    //****sort();******//
+    let arr2 = arr1.sort();
+    console.log(arr2);
+
+    //******reverse();***//
+    let arr3 = arr2.reverse();
+    console.log(arr3);
+
+    //**indexOf();********//
+    let ar1 = ["USA","UK","SL","UAE"];
+    console.log(ar1);
+    let id1 = ar1.indexOf("UK");
+    console.log("UK:",id1);
+
+    let id2 = ar1.indexOf("USA");
+    console.log("USA:",id2);
+
+    //****lastIndexOf();**//
+    ar1.push("SL");
+    console.log(ar1);
+
+    let id3 = ar1.lastIndexOf("SL");
+    console.log("SL:",id3);
+
+    //******filter();***//return wenne true or false
+    let ar2 = [2,5,7,8,9,11,12]
+
+    let filtered_array = ar2.filter(function (item){
+      return item % 2 == 0;
+    })
+    let filtered_array1 = ar2.filter(function (item) {
+        return item % 2 != 0;
+    })
+    console.log(filtered_array);
+    console.log(filtered_array1);
+
+    //*********Map******//
+    let ar3 = ["USA","India","Japan","Sri Lanka","Russia"];
+    /*for (let i = 0; i <ar3.length; i++) {
+        console.log(ar3[i]);
+    }*/
+    ar3.map((item,index)=>{
+      console.log(index+" "+item);
+    })
+
+    //*******************toString()*****************//
+    console.log("toString:",ar3.toString());
+
+    //**********Timers********//
+    //*********set time out***********//
+    //setTimeout(function ,delay-time)
+    setTimeout(()=>{
+        console.log("Timeout!!");
+    },6000); //3000ms
+
+    //********setInterval()*********//
+    setInterval(()=>{
+        console.log("set interval");
+    },6000)//3000ms
+</script>
+</body>
+</html>

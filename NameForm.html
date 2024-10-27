@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15 Javascript Event Listeners</title>
+</head>
+<body>
+
+<form>
+
+    <div style="margin-top: 10px">
+        <label for="fname">First Name</label> <br>
+        <input type="text" id="fname" name="fname" placeholder="First Name">
+    </div>
+    <div style="margin-top: 10px">
+        <label for="lname">Lirst Name</label> <br>
+        <input type="text" id="lname" name="lname" placeholder="Last Name">
+    </div>
+    <div style="margin-top: 10px">
+        <label for="email">Email</label> <br>
+        <input type="email" id="email" name="email" placeholder="Email">
+    </div>
+    <div style="margin-top: 10px">
+        <button id="save" type="button" style="background: #26ace0">Save</button>
+        <button type="button" style="background: yellow">Update</button>
+        <button type="button" style="background: #ff253a">Delete</button>
+    </div>
+
+</form>
+
+<table border="1" style="margin-top: 10px">
+    <thead>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    </thead>
+    <tbody id="tbody">
+    <tr>
+        <td>Kavindu</td>
+        <td>Akash</td>
+        <td>kavindu@ceyentra.com</td>
+    </tr>
+    <tr>
+        <td>Udara</td>
+        <td>Alistor</td>
+        <td>udarai@ceyentra.com</td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+
+    document.getElementById("save").addEventListener('click', function () {
+
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let email = document.getElementById("email").value;
+
+        let inner_html = document.getElementById("tbody").innerHTML;
+
+        let new_html = inner_html + "<tr> <td>" + fname + "</td> <td>" + lname + "</td> <td>" + email + "</td> </tr>";
+
+        document.getElementById("tbody").innerHTML = new_html;
+
+    });
+
+    document.getElementById("tbody").addEventListener('mouseover',function () {
+        console.log("mouse Over");
+    })
+
+</script>
+
+</body>
+</html>

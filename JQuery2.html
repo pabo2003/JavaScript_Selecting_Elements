@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>Click</button>
+<select>
+    <option value="java">Java</option>
+    <option value="python">Python</option>
+    <option value="c#">C#</option>
+    <option value="go">Go</option>
+</select>
+
+<script src="assest/lib/Jquary.js"></script>
+<script>
+    //change
+    $("select").change(function (event) {
+        console.log("Jquery change event!");
+    });
+
+    //on
+    $("button").on('click',function () {
+       console.log("on method clicked!");
+    });
+
+    $("input").on('input',function (event) {
+        console.log("on method input");
+    });
+    $("button").on({
+        click:function () {
+            console.log("click event")
+        },
+        dblclick:function () {
+            console.log("dbl click event");
+        }
+    });
+
+    let ol = $("ol").parent();
+    console.log(ol);
+</script>
+</body>
+</html>

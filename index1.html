@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>Backend</li>
+    <li>Frontend</li>
+    <li>
+        <ol>
+            <li>Sri Lanka</li>
+            <li>India</li>
+        </ol>
+    </li>
+</ul>
+<script src="assest/lib/Jquary.js"></script>
+<script>
+    /*let l1 = document.getElementsByTagName('ul')[0].children[2].getElementsByTagName('li')[1];
+    console.log(l1.toString());*/
+    /*let l1 = document.getElementsByTagName('ul')[0].children[2].children[0].children[1];
+    console.log(l1);*/
+    //parents();
+    let ol = $("ol").parents();
+    console.log(ol);
+    //parentsUntil();
+    let ol1 = $("ol").parentsUntil("ul");
+    console.log(ol1);
+
+    //eq();   ul eke mada thiyuana element type eke wenas nis eq() eke pawichchi krl apita oni element ek alla gnnw
+    let eq1 = $("ul").children().eq(2).children().eq(0).children().eq(1).text();
+    console.log(eq1);
+
+    //first(); & last();
+    let first = $("ol").children().first();
+    console.log(first);
+
+    let last = $("ol").children().last();
+    console.log(last);
+</script>
+</body>
+</html>

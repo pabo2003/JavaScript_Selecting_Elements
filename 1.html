@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //name functions
+    function myFunction(){
+        console.log("My Function");
+    }
+    myFunction();
+    //variable declar krnn oni n
+    function myFunction1(i,x){
+        let total = i + x;
+        console.log("sum = " + total);
+    }
+    myFunction1(1,2);
+    //***************************function expression**********************//
+    const myFunction2 = function () {
+        console.log("My function 2");
+    }
+    myFunction2();
+    const myFunction3 = function (a, b) {
+        console.log("sum = ",a+b);
+    }
+    myFunction3(4,6);
+
+    //********************function constructor*******************//
+    const myFunction4 = new Function("arg1","arg2","return arg1+arg2");
+
+    let result = myFunction4(10,20);
+    console.log("Result = ",result);
+
+    //********************Arrow function****************************//
+
+    const myArrowFunction = ()=>{
+        console.log("My Arrow Function");
+    }
+    myArrowFunction();
+
+    const myArrowFunction1 = (value1,value2) => {
+        console.log("Arrow Sum : ",value1+value2);
+    }
+    myArrowFunction1(30,40);
+
+    //********************Anonymous Functions*****************//
+    document.getElementById("myBtn").addEventListener('click',function (){
+
+    })
+    document.getElementById("myBtn").addEventListener('click',()=>{
+
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>Click</button>
+<h1>Hello jquery event</h1>
+
+<script src="assest/lib/Jquary.js"></script>
+<script>
+    /*document.getElementsByTagName('button')[0].addEventListener('click',function () {
+        console.log("Clicked!!");
+    });*/
+    //click event
+    $("button").click(function () {
+        console.log("JQuery Clicked!!");
+    })
+    //doubble click event
+    $("button").dblclick(function () {
+        console.log("JQuery dblclick Clicked!!");
+    })
+
+
+</script>
+</body>
+</html>
