@@ -1,6 +1,6 @@
 //import class Customer
 import CustomerModel from "../model/customerModel.js";
-import {customer_array,item_array,order_array} from "../DB/database";
+// import {customer_array,item_array,order_array} from "../DB/database";
 
 //pos validation//
 const validateEmail = (email)=>{
